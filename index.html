@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS</title>
+    <script>
+      class Shape {
+        constructor(colour) {
+          this.colour = colour;
+        }
+
+        getcolour() {
+          return this.colour;
+        }
+      }
+
+      class triangle extends Shape {
+        constructor(colour, height, breadth) {
+          super(colour);
+          this.height = height;
+          this.breadth = breadth;
+        }
+        getArea() {
+          return (this.height * this.breadth) / 2;
+        }
+      }
+
+      class rectangle extends Shape {
+        constructor(colour, length, breadth) {
+          super(colour);
+          this.length = length;
+          this.breadth = breadth;
+        }
+        getArea() {
+          return this.length * this.breadth;
+        }
+      }
+      class circle extends Shape {
+        constructor(colour, radius) {
+          super(colour);
+          this.radius = radius;
+        }
+        getArea() {
+          return 3.14 * this.radius * this.radius;
+        }
+      }
+
+      let a = new triangle("red", 2, 3);
+      let b = new rectangle("blue", 4, 5);
+      let c = new circle("yellow", 5);
+      console.log(a.getArea());
+      console.log(b.getArea());
+      console.log(c.getArea());
+    </script>
+  </head>
+  <body></body>
+</html>
